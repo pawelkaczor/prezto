@@ -13,6 +13,7 @@ fi
 # Customize to your needs...
 
 export EDITOR='subl'
+export BROWSER='chrome'
 
 bg() {
   "$@" &
@@ -21,6 +22,8 @@ bg() {
 #
 # aliasses
 #
+
+alias chrome='LD_LIBRARY_PATH=/home/newion/gtk2/lib:$LD_LIBRARY_PATH /usr/bin/google-chrome'
 
 alias mci='mvn clean install'
 alias mst='mvn clean install -Dmaven.test.skip=true'
@@ -46,3 +49,4 @@ alias -s jar="java -jar"
 alias -s deb="sudo dpkg -i"
 
 alias -g g='|grep '
+alias -g s='subl -n'
