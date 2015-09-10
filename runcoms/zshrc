@@ -23,8 +23,6 @@ bg() {
 # aliasses
 #
 
-alias chrome='LD_LIBRARY_PATH=/home/newion/gtk2/lib:$LD_LIBRARY_PATH /usr/bin/google-chrome'
-
 alias mci='mvn clean install'
 alias mst='mvn clean install -Dmaven.test.skip=true'
 alias gk='gitk &'
