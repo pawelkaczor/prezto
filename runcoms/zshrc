@@ -48,3 +48,4 @@ alias -s deb="sudo dpkg -i"
 
 alias -g g='|grep '
 alias -g s='subl -n'
+alias -g ki='sudo kill -9'
