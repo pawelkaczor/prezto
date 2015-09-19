@@ -20,21 +20,6 @@ bg() {
 }
 
 #
-# aliasses
-#
-
-alias mci='mvn clean install'
-alias mst='mvn clean install -Dmaven.test.skip=true'
-alias gk='gitk &'
-alias gg='git gui &'
-alias gs='git status -sb'
-alias gsr='git svn rebase'
-alias gsd='git svn dcommit'
-
-alias spull='git stash -u && gsr && git stash apply'
-alias spush='git stash -u && gsd && git stash apply'
-
-#
 # default apps
 #
 
@@ -49,3 +34,22 @@ alias -s deb="sudo dpkg -i"
 alias -g g='|grep '
 alias -g s='subl -n'
 alias -g ki='sudo kill -9'
+
+#
+# aliasses
+#
+
+alias mci='mvn clean install'
+alias mst='mvn clean install -Dmaven.test.skip=true'
+alias gk='gitk &'
+alias gg='git gui &'
+alias gs='git status -sb'
+alias gsr='git svn rebase'
+alias gsd='git svn dcommit'
+
+alias spull='git stash -u && gsr && git stash apply'
+alias spush='git stash -u && gsd && git stash apply'
+
+alias acup='cd ~/Projects/acavista; mr up; cd -'
+alias acst='cd ~/Projects/acavista; mr st; cd -'
+alias acdi='cd ~/Projects/acavista; mr di; cd -'
