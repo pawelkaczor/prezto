@@ -15,7 +15,7 @@ fi
 export EDITOR='subl'
 export BROWSER='chrome'
 
-export SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxMetaspaceSize=1024M"
 export DDD_LEAVEN_AKKA_HOME="/home/newion/Projects/ddd-leaven-akka-v2"
 export IDEA_HOME="/opt/devel/idea"
 
@@ -58,3 +58,5 @@ alias acup='cd ~/Projects/acavista; mr up; cd -'
 alias acst='cd ~/Projects/acavista; mr st; cd -'
 alias acdi='cd ~/Projects/acavista; mr di; cd -'
 alias update='sudo apt-get dist-upgrade'
+
+findgrep() { find . -type f -exec grep --colour -nHr "$1" {} \; ; }
