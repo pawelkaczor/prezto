@@ -36,7 +36,8 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'tmux' \
   'history-substring-search' \
-  'prompt'
+  'prompt' \
+  'ruby'
 
 #
 # Autosuggestions

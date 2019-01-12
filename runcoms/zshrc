@@ -12,12 +12,16 @@ fi
 
 # Customize to your needs...
 
+export JMSLOGDIR='/tmp/jms-journal'
 export EDITOR='subl'
 export BROWSER='chrome'
 
 export SBT_OPTS="-Xms512M -Xmx1536M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxMetaspaceSize=1024M"
 export DDD_LEAVEN_AKKA_HOME="/home/newion/Projects/ddd-leaven-akka-v2"
 export IDEA_HOME="/opt/devel/idea"
+
+export JENKINS_HEDVENTURES_USER="newion"
+export JENKINS_HEDVENTURES_PSWD="7biOBDk2LFgs" 
 
 bg() {
   "$@" &
@@ -50,6 +54,7 @@ alias gg='git gui &'
 alias gs='git status -sb'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
+alias gss='git submodule status'
 
 alias spull='git stash -u && gsr && git stash apply'
 alias spush='git stash -u && gsd && git stash apply'
@@ -58,5 +63,10 @@ alias acup='cd ~/Projects/acavista; mr up; cd -'
 alias acst='cd ~/Projects/acavista; mr st; cd -'
 alias acdi='cd ~/Projects/acavista; mr di; cd -'
 alias update='sudo apt-get dist-upgrade'
+
+alias release='sbt "release with-defaults"'
+alias sbt="sbt -mem 1500"
+
+alias rmvn="mvn -s ~/.m2/settings-rewe4.xml"
 
 findgrep() { find . -type f -exec grep --colour -nHr "$1" {} \; ; }
